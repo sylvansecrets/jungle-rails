@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     delete :remove_item
   end
 
+  resource :user, only: [:new, :create]
+
+  resource :session, only: [:new, :create, :destroy]
+
   resources :orders, only: [:create, :show]
 
   namespace :admin do
