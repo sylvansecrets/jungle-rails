@@ -1,0 +1,10 @@
+<h1> Become a Denizen of the Jungle </h1>
+
+<%= form_for :user, url: '/user' do |auth_form| %>
+
+  Email: <%= auth_form.text_field :email %> <br />
+  Password: <%= auth_form.password_field :password %> <br />
+  Password Confirmation: <%= auth_form.password_field :password_confirmation %>
+  <%= auth_form.submit "Submit" %>
+
+<% end %>
