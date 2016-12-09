@@ -1,0 +1,12 @@
+<% if product = Product.find_by(id: line.product_id) %>
+  <% @cart_total += product.price * line.quantity %>
+
+  Name: <%= product.name %>
+  <br />
+  Price: <%= product.price %>
+  <br />
+  Quantity Purchased: <%= line.quantity %>
+  <br />
+  Total Price: <%= product.price * line.quantity %>
+
+<% end %>
