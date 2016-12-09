@@ -33,5 +33,12 @@
       <%= render 'review', review: review %>
     <% end %>
   </div>
-
+  <div>
+    <%= form_for [@product] do |f| %>
+      <p><%= f.text_area :description %></p>
+      <p><%= f.select :id, options_for_select([['Great 5',5], ['Good 4', 4], ['Passable 3', 3], ['Questionable 2', 2], ['Deplorable 1', 1]])%>
+      </p>
+      <p><%= f.submit %></p>
+    <% end %>
+  </div>
 </section>
