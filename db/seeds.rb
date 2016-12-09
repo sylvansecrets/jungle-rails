@@ -133,4 +133,33 @@ cat3.products.create!({
 })
 
 
+puts "Onto reviews"
+
+user1 = User.create!({
+  email: 'e@e',
+  password: 'ff',
+  password_confirmation: 'ff'
+  })
+
+user2 = User.create!({
+  email: 'f@f',
+  password: 'gg',
+  password_confirmation: 'gg'
+  })
+
+review1 = Review.create!({
+  user_id: 1,
+  product_id: 3,
+  description: 'fdfdffd',
+  rating: 4
+  })
+
+review2 = Review.create!({
+  user_id:2,
+  product_id: 3,
+  description: 'description text',
+  rating: -2
+  })
+
+
 puts "DONE!"
