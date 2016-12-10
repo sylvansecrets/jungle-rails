@@ -1,4 +1,11 @@
-<div>
-  <%= review.description %>
-  <%= review.inspect %>
+<div class="review_block">
+  <span class="review_user"><%= User.find(review.user_id).email %> </span>
+  <div class="row">
+    <p class="review col-md-7"> <%= review.description %> </p>
+    <% if current_user.id == review.user_id %>
+      <%= link_to fa_icon('trash'), [@product, review], class: 'btn btn-sm btn-danger col-md-1', method: :delete, data: { confirm: "Are you sure you want to delete this review?" } %>
+    <% end %>
+  </div>
+  <p class="review_time"> Reviewed on: <%= review.created_at %> </p>
+
 </div>
