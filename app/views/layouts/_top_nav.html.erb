@@ -28,7 +28,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
        <% if current_user %>
-        <li class='logged_in'> Signed in as <%= current_user.email %> </li>
+       <li class='auth'> <a> <%= "Signed in as #{current_user.email}" %> </a> </li>
         <li class='auth'> <%= link_to "Logout", '/session', method: :delete %> </li>
        <% else %>
         <li class='auth'> <%= link_to "Login", '/session/new' %> </li>
