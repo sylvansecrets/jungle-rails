@@ -1,7 +1,8 @@
 <h1> Become a Denizen of the Jungle </h1>
 
 <%= form_for :user, url: '/user' do |auth_form| %>
-
+  Formatted Name: <%= auth_form.text_field :formatted_name %> <br />
+  Preferred name: <%= auth_form.text_field :preferred_name %> <br />
   Email: <%= auth_form.text_field :email %> <br />
   Password: <%= auth_form.password_field :password %> <br />
   Password Confirmation: <%= auth_form.password_field :password_confirmation %>
